@@ -1,2 +1,6 @@
 venv
-airflow_pipeline/logs
+airflow/logs
+airflow/standalone_admin_password.txt
+airflow/airflow-webserver.pid
+airflow/**/__pycache__
+airflow/airflow.db

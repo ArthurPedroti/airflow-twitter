@@ -1,5 +1,5 @@
 import sys
-sys.path.append("airflow_pipeline")
+sys.path.append("airflow")
 
 from hook.twitter_hook import TwitterHook
 from datetime import datetime, timedelta

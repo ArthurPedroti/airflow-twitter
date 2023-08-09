@@ -1,5 +1,5 @@
 import sys
-sys.path.append("airflow_pipeline")
+sys.path.append("airflow")
 
 from airflow.models import DAG
 from airflow.utils.dates import days_ago

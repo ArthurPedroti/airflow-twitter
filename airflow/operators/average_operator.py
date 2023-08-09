@@ -1,5 +1,5 @@
 import sys
-sys.path.append("airflow_pipeline")
+sys.path.append("airflow")
 
 from hook.protheus_api_hook import ProtheusApiHook
 from airflow.models import BaseOperator, DAG, TaskInstance
