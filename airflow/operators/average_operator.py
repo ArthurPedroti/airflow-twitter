@@ -1,5 +1,10 @@
 import sys
 sys.path.append("airflow")
+from dotenv import load_dotenv
+import os
+
+# Load variables from .env file into the environment
+load_dotenv()
 
 from hook.protheus_api_hook import ProtheusApiHook
 from airflow.models import BaseOperator, DAG, TaskInstance
@@ -20,11 +25,11 @@ class AverageOperator(BaseOperator):
         try:
             # Replace these with your PostgreSQL database credentials
             conn = psycopg2.connect(
-                database='agf_datawarehouse',
-                user='postgres',
-                password='postgres',
-                host='localhost',
-                port='5432'
+                database=os.getenv("DATABASE"),
+                user=os.getenv("DATABASE_USER"),
+                password=os.getenv("DATABASE_PASSWORD"),
+                host=os.getenv("DATABASE_HOST"),
+                port=os.getenv("DATABASE_PORT")
             )
 
             cursor = conn.cursor()

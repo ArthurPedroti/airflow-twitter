@@ -1,8 +1,6 @@
-from datetime import datetime, timedelta
 from airflow.providers.http.hooks.http import HttpHook
 import requests
 import json
-
 class ProtheusApiHook(HttpHook):
 
     def __init__(self, route, params = {}, conn_id=None,):
